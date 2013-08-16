@@ -1,0 +1,7 @@
+record(asyn,"$(DEV):COMM") {
+  field(DESC, "asyn communication")
+  field(PORT,"$(PORT)")
+  field(ADDR,"$(ADDR)")
+  field(OEOS,"\\r\\n")
+  field(IEOS,"\\r\\n")
+}

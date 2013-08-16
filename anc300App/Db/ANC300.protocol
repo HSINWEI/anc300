@@ -1,0 +1,104 @@
+# StreamDevice protocol for the ANC300.
+#
+InTerminator = CR LF;
+OutTerminator = CR LF;
+replytimeout = 500;
+readtimeout  = 500;
+locktimeout = 60000;
+
+#default password = "123456";
+
+login {
+    out "\$1";
+
+    out "echo off";
+    in "echo off";
+    in "OK";
+
+    # Just ignore all of this -- so long as it logs in it should be alright
+    # I'm still curious if there's a good way to catch all this though...
+    #in "attocube ANC300 controller version %*d.%*d.%*d-%*d %*d-%*d-%*d %*d:%*d";
+    #in "ANC150 compatibillity console";
+    #in ""; 
+    #in "Authorization code: ******";
+    #in "Authorization success";
+}
+
+ver {
+    out "ver";
+    in "attocube ANC300 controller version %40c";
+    in "ANC150 compatibillity console";
+    in "OK";
+}
+
+stop {
+    out "stop \$1";
+    in "OK";
+}
+
+step {
+    @mismatch { 
+        in "Axis %(\$3:ERROR.VAL)39c";
+        in "ERROR";
+    }
+    out "step\$1 \$2 %d";
+    in "OK";
+}
+
+# - Generic get/set (string) 
+getStr {
+    @mismatch {
+        in "Feature %(\$4:ERROR.VAL)39c";
+        in "ERROR";
+    }
+
+    out "\$1 \$2";
+    in "\$3 = %39c";
+    in "OK";
+}
+
+setStr {
+    out "\$1 \$2 %s";
+    in "OK";
+}
+
+# - Generic get/set (raw string) 
+getStrRaw {
+    out "\$1 \$2";
+    in "%39c";
+    in "OK";
+}
+
+setStrRaw {
+    @mismatch {
+        in "Feature %(\$3:ERROR.VAL)39c";
+        in "ERROR";
+    }
+    out "\$1 \$2 %s";
+    in "%39c";
+    in "OK";
+}
+
+# - Generic get/set (float) 
+getF {
+    out "\$1 \$2";
+    #in "\$1 \$2"; # if echo is on
+    in "\$3 = %f \$4";
+    in "OK";
+}
+
+# There's an alternate version of getF with a screwed up acknowledgement/OK:
+getF_OK {
+    out "\$1 \$2";
+    #in "\$1 \$2"; # if echo is on
+    in "\$3 = %f \$4OK";
+}
+
+setF {
+    out "\$1 \$2 %f";
+    #in "\$1 \$2 %*f"; # if echo is on
+    in "OK";
+}
+
+
+# TODO: ask attocube about getpu/getpd (get step up/down pattern)

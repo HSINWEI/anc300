@@ -1,0 +1,3 @@
+#FILE... modules_ANC300.req
+
+file "ANC300.req", DEVICE=E1:ANC300

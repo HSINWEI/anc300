@@ -1,0 +1,909 @@
+
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 115
+y 171
+w 385
+h 620
+font "helvetica-medium-r-18.0"
+ctlFont "helvetica-medium-r-8.0"
+btnFont "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 4
+textColor index 14
+ctlFgColor1 index 30
+ctlFgColor2 index 32
+ctlBgColor1 index 34
+ctlBgColor2 index 35
+topShadowColor index 37
+botShadowColor index 44
+snapToGrid
+gridSize 5
+endScreenProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 0
+w 385
+h 25
+lineColor index 26
+fill
+fillColor index 26
+lineWidth 0
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 60
+y 5
+w 385
+h 25
+font "helvetica-medium-r-12.0"
+fgColor index 0
+bgColor index 0
+useDisplayBg
+value {
+  "ANC300 - $(DEV) - Axis $(A)"
+}
+endObjectProperties
+
+
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 50
+w 90
+h 20
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Measure capacitance"
+}
+
+endObjectProperties
+# (Menu Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 25
+y 50
+w 200
+h 20
+fgColor index 14
+onColor index 34
+offColor index 34
+inconsistentColor index 35
+topShadowColor index 37
+botShadowColor index 44
+3d
+font "helvetica-medium-r-18.0"
+objType "controls"
+controlPv "$(DEV)AX$(A):MEAS_CAP"
+indicatorPv ""
+endObjectProperties
+
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 70
+w 90
+h 20
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Stop"
+}
+
+endObjectProperties
+# (Menu Button)
+object activeButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 25
+y 70
+w 200
+h 20
+fgColor index 14
+onColor index 34
+offColor index 34
+inconsistentColor index 35
+topShadowColor index 37
+botShadowColor index 44
+3d
+font "helvetica-medium-r-18.0"
+objType "controls"
+controlPv "$(DEV)AX$(A):STOP"
+indicatorPv ""
+endObjectProperties
+
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 90
+w 90
+h 20
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "AC Input"
+}
+
+endObjectProperties
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 25
+y 90
+w 200
+h 20
+fgColor index 14
+bgColor index 34
+inconsistentColor index 35
+topShadowColor index 37
+botShadowColor index 44
+controlPv "$(DEV)AX$(A):ACIN_OUT"
+indicatorPv "$(DEV)AX$(A):ACIN_IN"
+font "helvetica-medium-r-18.0"
+endObjectProperties
+
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 110
+w 90
+h 20
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DC Input"
+}
+
+endObjectProperties
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 25
+y 110
+w 200
+h 20
+fgColor index 14
+bgColor index 34
+inconsistentColor index 35
+topShadowColor index 37
+botShadowColor index 44
+controlPv "$(DEV)AX$(A):DCIN_OUT"
+indicatorPv "$(DEV)AX$(A):DCIN_IN"
+font "helvetica-medium-r-18.0"
+endObjectProperties
+
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 130
+w 90
+h 20
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Filter"
+}
+
+endObjectProperties
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 25
+y 130
+w 200
+h 20
+fgColor index 14
+bgColor index 34
+inconsistentColor index 35
+topShadowColor index 37
+botShadowColor index 44
+controlPv "$(DEV)AX$(A):FILTER_OUT"
+indicatorPv "$(DEV)AX$(A):FILTER_IN"
+font "helvetica-medium-r-18.0"
+endObjectProperties
+
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 150
+w 90
+h 20
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Mode"
+}
+
+endObjectProperties
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 25
+y 150
+w 200
+h 20
+fgColor index 14
+bgColor index 34
+inconsistentColor index 35
+topShadowColor index 37
+botShadowColor index 44
+controlPv "$(DEV)AX$(A):MODE_OUT"
+indicatorPv "$(DEV)AX$(A):MODE_IN"
+font "helvetica-medium-r-18.0"
+endObjectProperties
+
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 170
+w 90
+h 20
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Output trigger enable"
+}
+
+endObjectProperties
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 25
+y 170
+w 200
+h 20
+fgColor index 14
+bgColor index 34
+inconsistentColor index 35
+topShadowColor index 37
+botShadowColor index 44
+controlPv "$(DEV)AX$(A):OUT_TRIG_OUT"
+indicatorPv "$(DEV)AX$(A):OUT_TRIG_IN"
+font "helvetica-medium-r-18.0"
+endObjectProperties
+
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 190
+w 90
+h 20
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Trigger down"
+}
+
+endObjectProperties
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 25
+y 190
+w 200
+h 20
+fgColor index 14
+bgColor index 34
+inconsistentColor index 35
+topShadowColor index 37
+botShadowColor index 44
+controlPv "$(DEV)AX$(A):TRIG_DOWN_OUT"
+indicatorPv "$(DEV)AX$(A):TRIG_DOWN_IN"
+font "helvetica-medium-r-18.0"
+endObjectProperties
+
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 210
+w 90
+h 20
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Trigger up"
+}
+
+endObjectProperties
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 25
+y 210
+w 200
+h 20
+fgColor index 14
+bgColor index 34
+inconsistentColor index 35
+topShadowColor index 37
+botShadowColor index 44
+controlPv "$(DEV)AX$(A):TRIG_UP_OUT"
+indicatorPv "$(DEV)AX$(A):TRIG_UP_IN"
+font "helvetica-medium-r-18.0"
+endObjectProperties
+
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 125
+y 230
+w 70
+h 10
+controlPv "$(DEV)AX$(A):SERIAL"
+format "decimal"
+font "helvetica-medium-r-8.0"
+fontAlign "right"
+fgColor index 26
+bgColor index 4
+autoHeight
+
+nullColor index 32
+smartRefresh
+fastUpdate
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 230
+w 90
+h 20
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Axis serial number"
+}
+endObjectProperties
+
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 125
+y 250
+w 70
+h 10
+controlPv "$(DEV)AX$(A):CAP_STR"
+format "decimal"
+font "helvetica-medium-r-8.0"
+fontAlign "right"
+fgColor index 26
+bgColor index 4
+autoHeight
+
+nullColor index 32
+smartRefresh
+fastUpdate
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 250
+w 90
+h 20
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Capacitance"
+}
+endObjectProperties
+
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 125
+y 270
+w 70
+h 10
+controlPv "$(DEV)AX$(A):VOLTS"
+format "decimal"
+font "helvetica-medium-r-8.0"
+fontAlign "right"
+fgColor index 26
+bgColor index 4
+autoHeight
+
+nullColor index 32
+smartRefresh
+fastUpdate
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 270
+w 90
+h 20
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Output voltage"
+}
+endObjectProperties
+
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 25
+y 290
+w 90
+h 20
+controlPv "$(DEV)AX$(A):FREQ_IN"
+format "decimal"
+font "helvetica-medium-r-8.0"
+fontAlign "right"
+fgColor index 26
+bgColor index 4
+autoHeight
+
+nullColor index 32
+smartRefresh
+fastUpdate
+useHexPrefix
+showUnits
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 125
+y 290
+w 95
+h 14
+controlPv "$(DEV)AX$(A):FREQ_OUT"
+format "decimal"
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 51
+editable
+autoHeight
+
+motifWidget
+nullColor index 32
+smartRefresh
+fastUpdate
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 290
+w 90
+h 20
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Frequency"
+}
+endObjectProperties
+
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 25
+y 310
+w 90
+h 20
+controlPv "$(DEV)AX$(A):V_IN"
+format "decimal"
+font "helvetica-medium-r-8.0"
+fontAlign "right"
+fgColor index 26
+bgColor index 4
+autoHeight
+
+nullColor index 32
+smartRefresh
+fastUpdate
+useHexPrefix
+showUnits
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 125
+y 310
+w 95
+h 14
+controlPv "$(DEV)AX$(A):V_OUT"
+format "decimal"
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 51
+editable
+autoHeight
+
+motifWidget
+nullColor index 32
+smartRefresh
+fastUpdate
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 310
+w 90
+h 20
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Voltage"
+}
+endObjectProperties
+
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 25
+y 330
+w 90
+h 20
+controlPv "$(DEV)AX$(A):OFFSET_IN"
+format "decimal"
+font "helvetica-medium-r-8.0"
+fontAlign "right"
+fgColor index 26
+bgColor index 4
+autoHeight
+
+nullColor index 32
+smartRefresh
+fastUpdate
+useHexPrefix
+showUnits
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 125
+y 330
+w 95
+h 14
+controlPv "$(DEV)AX$(A):OFFSET_OUT"
+format "decimal"
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 51
+editable
+autoHeight
+
+motifWidget
+nullColor index 32
+smartRefresh
+fastUpdate
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 330
+w 90
+h 20
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Voltage offset"
+}
+endObjectProperties
+
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 125
+y 350
+w 95
+h 14
+controlPv "$(DEV)AX$(A):STEP_DOWN"
+format "decimal"
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 51
+editable
+autoHeight
+
+motifWidget
+nullColor index 32
+smartRefresh
+fastUpdate
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 350
+w 90
+h 20
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Step n steps down"
+}
+endObjectProperties
+
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 125
+y 370
+w 95
+h 14
+controlPv "$(DEV)AX$(A):STEP_UP"
+format "decimal"
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 51
+editable
+autoHeight
+
+motifWidget
+nullColor index 32
+smartRefresh
+fastUpdate
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 370
+w 90
+h 20
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Step n steps up"
+}
+endObjectProperties
+
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 25
+y 50
+w 340
+h 340
+lineColor index 26
+lineWidth 0
+endObjectProperties
+
+

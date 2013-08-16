@@ -1,0 +1,342 @@
+
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 115
+y 171
+w 385
+h 620
+font "helvetica-medium-r-18.0"
+ctlFont "helvetica-medium-r-8.0"
+btnFont "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 4
+textColor index 14
+ctlFgColor1 index 30
+ctlFgColor2 index 32
+ctlBgColor1 index 34
+ctlBgColor2 index 35
+topShadowColor index 37
+botShadowColor index 44
+snapToGrid
+gridSize 5
+endScreenProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 0
+w 385
+h 25
+lineColor index 26
+fill
+fillColor index 26
+lineWidth 0
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 60
+y 5
+w 385
+h 25
+font "helvetica-medium-r-12.0"
+fgColor index 0
+bgColor index 0
+useDisplayBg
+value {
+  "ANC300 - $(DEV)"
+}
+endObjectProperties
+
+
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 125
+y 50
+w 70
+h 10
+controlPv "$(DEV)VER"
+format "decimal"
+font "helvetica-medium-r-8.0"
+fontAlign "right"
+fgColor index 26
+bgColor index 4
+autoHeight
+
+nullColor index 32
+smartRefresh
+fastUpdate
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 50
+w 90
+h 20
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Device version"
+}
+endObjectProperties
+
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 125
+y 70
+w 70
+h 10
+controlPv "$(DEV)CSER"
+format "decimal"
+font "helvetica-medium-r-8.0"
+fontAlign "right"
+fgColor index 26
+bgColor index 4
+autoHeight
+
+nullColor index 32
+smartRefresh
+fastUpdate
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 70
+w 90
+h 20
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Device version"
+}
+endObjectProperties
+
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 125
+y 90
+w 70
+h 10
+controlPv "$(DEV)ERROR"
+format "decimal"
+font "helvetica-medium-r-8.0"
+fontAlign "right"
+fgColor index 26
+bgColor index 4
+autoHeight
+
+nullColor index 32
+smartRefresh
+fastUpdate
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 90
+w 90
+h 20
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Last error string"
+}
+endObjectProperties
+
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 125
+y 110
+w 70
+h 10
+controlPv "$(DEV)INIT"
+format "decimal"
+font "helvetica-medium-r-8.0"
+fontAlign "right"
+fgColor index 26
+bgColor index 4
+autoHeight
+
+nullColor index 32
+smartRefresh
+fastUpdate
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 110
+w 90
+h 20
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Login and initialize"
+}
+endObjectProperties
+
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 25
+y 130
+w 90
+h 20
+controlPv ""
+format "decimal"
+font "helvetica-medium-r-8.0"
+fontAlign "right"
+fgColor index 26
+bgColor index 4
+autoHeight
+
+nullColor index 32
+smartRefresh
+fastUpdate
+useHexPrefix
+showUnits
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 125
+y 130
+w 95
+h 14
+controlPv "$(DEV)FEATURE_OUT"
+format "decimal"
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 51
+editable
+autoHeight
+
+motifWidget
+nullColor index 32
+smartRefresh
+fastUpdate
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 225
+y 130
+w 90
+h 20
+font "helvetica-medium-r-8.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Set feature code"
+}
+endObjectProperties
+
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 25
+y 50
+w 340
+h 100
+lineColor index 26
+lineWidth 0
+endObjectProperties
+
+

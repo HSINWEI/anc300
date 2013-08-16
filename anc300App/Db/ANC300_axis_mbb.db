@@ -1,0 +1,281 @@
+
+## TRIG_DOWN: Trigger down
+record(mbbi, "$(DEV):AX$(A):TRIG_DOWN_IN") {
+    field(DESC, "Trigger down")
+    field(DTYP, "stream")
+    field(INP, "@ANC300.protocol getStr(gettd,$(A),trigger,$(DEV)) $(PORT) 0")
+    field(SCAN, "$(SCAN)")
+    field(PINI, "YES")
+    field(PHAS, 1)
+    
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+    field("SXVL", "6")
+    field("ZRST", "off")
+    field("ONST", "1")
+    field("TWST", "2")
+    field("THST", "3")
+    field("FRST", "4")
+    field("FVST", "5")
+    field("SXST", "6")
+
+}
+
+record(mbbo, "$(DEV):AX$(A):TRIG_DOWN_OUT") {
+    field(DESC, "Trigger down")
+    field(DTYP, "stream")
+    field(OUT, "@ANC300.protocol setStr(settd,$(A)) $(PORT) 0")
+    field(FLNK, "$(DEV):AX$(A):TRIG_DOWN_IN")
+
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+    field("SXVL", "6")
+    field("ZRST", "off")
+    field("ONST", "1")
+    field("TWST", "2")
+    field("THST", "3")
+    field("FRST", "4")
+    field("FVST", "5")
+    field("SXST", "6")
+
+    info(autosaveFields, "VAL")
+}
+
+
+## OUT_TRIG: Output trigger enable
+record(mbbi, "$(DEV):AX$(A):OUT_TRIG_IN") {
+    field(DESC, "Output trigger enable")
+    field(DTYP, "stream")
+    field(INP, "@ANC300.protocol getStr(getto,$(A),trigger,$(DEV)) $(PORT) 0")
+    field(SCAN, "$(SCAN)")
+    field(PINI, "YES")
+    field(PHAS, 1)
+    
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("ZRST", "0")
+    field("ONST", "1")
+
+}
+
+record(mbbo, "$(DEV):AX$(A):OUT_TRIG_OUT") {
+    field(DESC, "Output trigger enable")
+    field(DTYP, "stream")
+    field(OUT, "@ANC300.protocol setStr(setto,$(A)) $(PORT) 0")
+    field(FLNK, "$(DEV):AX$(A):OUT_TRIG_IN")
+
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("ZRST", "0")
+    field("ONST", "1")
+
+    info(autosaveFields, "VAL")
+}
+
+
+## DCIN: DC Input
+record(mbbi, "$(DEV):AX$(A):DCIN_IN") {
+    field(DESC, "DC Input")
+    field(DTYP, "stream")
+    field(INP, "@ANC300.protocol getStr(getdci,$(A),dcin,$(DEV)) $(PORT) 0")
+    field(SCAN, "$(SCAN)")
+    field(PINI, "YES")
+    field(PHAS, 1)
+    
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("ZRST", "off")
+    field("ONST", "on")
+
+}
+
+record(mbbo, "$(DEV):AX$(A):DCIN_OUT") {
+    field(DESC, "DC Input")
+    field(DTYP, "stream")
+    field(OUT, "@ANC300.protocol setStr(setdci,$(A)) $(PORT) 0")
+    field(FLNK, "$(DEV):AX$(A):DCIN_IN")
+
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("ZRST", "off")
+    field("ONST", "on")
+
+    info(autosaveFields, "VAL")
+}
+
+
+## TRIG_UP: Trigger up
+record(mbbi, "$(DEV):AX$(A):TRIG_UP_IN") {
+    field(DESC, "Trigger up")
+    field(DTYP, "stream")
+    field(INP, "@ANC300.protocol getStr(gettu,$(A),trigger,$(DEV)) $(PORT) 0")
+    field(SCAN, "$(SCAN)")
+    field(PINI, "YES")
+    field(PHAS, 1)
+    
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+    field("SXVL", "6")
+    field("ZRST", "off")
+    field("ONST", "1")
+    field("TWST", "2")
+    field("THST", "3")
+    field("FRST", "4")
+    field("FVST", "5")
+    field("SXST", "6")
+
+}
+
+record(mbbo, "$(DEV):AX$(A):TRIG_UP_OUT") {
+    field(DESC, "Trigger up")
+    field(DTYP, "stream")
+    field(OUT, "@ANC300.protocol setStr(settu,$(A)) $(PORT) 0")
+    field(FLNK, "$(DEV):AX$(A):TRIG_UP_IN")
+
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+    field("SXVL", "6")
+    field("ZRST", "off")
+    field("ONST", "1")
+    field("TWST", "2")
+    field("THST", "3")
+    field("FRST", "4")
+    field("FVST", "5")
+    field("SXST", "6")
+
+    info(autosaveFields, "VAL")
+}
+
+
+## FILTER: Filter
+record(mbbi, "$(DEV):AX$(A):FILTER_IN") {
+    field(DESC, "Filter")
+    field(DTYP, "stream")
+    field(INP, "@ANC300.protocol getStr(getfil,$(A),filter,$(DEV)) $(PORT) 0")
+    field(SCAN, "$(SCAN)")
+    field(PINI, "YES")
+    field(PHAS, 1)
+    
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("ZRST", "off")
+    field("ONST", "16")
+    field("TWST", "160")
+
+}
+
+record(mbbo, "$(DEV):AX$(A):FILTER_OUT") {
+    field(DESC, "Filter")
+    field(DTYP, "stream")
+    field(OUT, "@ANC300.protocol setStr(setfil,$(A)) $(PORT) 0")
+    field(FLNK, "$(DEV):AX$(A):FILTER_IN")
+
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("ZRST", "off")
+    field("ONST", "16")
+    field("TWST", "160")
+
+    info(autosaveFields, "VAL")
+}
+
+
+## ACIN: AC Input
+record(mbbi, "$(DEV):AX$(A):ACIN_IN") {
+    field(DESC, "AC Input")
+    field(DTYP, "stream")
+    field(INP, "@ANC300.protocol getStr(getaci,$(A),acin,$(DEV)) $(PORT) 0")
+    field(SCAN, "$(SCAN)")
+    field(PINI, "YES")
+    field(PHAS, 1)
+    
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("ZRST", "off")
+    field("ONST", "on")
+
+}
+
+record(mbbo, "$(DEV):AX$(A):ACIN_OUT") {
+    field(DESC, "AC Input")
+    field(DTYP, "stream")
+    field(OUT, "@ANC300.protocol setStr(setaci,$(A)) $(PORT) 0")
+    field(FLNK, "$(DEV):AX$(A):ACIN_IN")
+
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("ZRST", "off")
+    field("ONST", "on")
+
+    info(autosaveFields, "VAL")
+}
+
+
+## MODE: Mode
+record(mbbi, "$(DEV):AX$(A):MODE_IN") {
+    field(DESC, "Mode")
+    field(DTYP, "stream")
+    field(INP, "@ANC300.protocol getStr(getm,$(A),mode,$(DEV)) $(PORT) 0")
+    field(SCAN, "$(SCAN)")
+    field(PINI, "YES")
+    field(PHAS, 1)
+    
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+    field("SXVL", "6")
+    field("ZRST", "gnd")
+    field("ONST", "inp")
+    field("TWST", "cap")
+    field("THST", "stp")
+    field("FRST", "off")
+    field("FVST", "stp+")
+    field("SXST", "stp-")
+
+}
+
+record(mbbo, "$(DEV):AX$(A):MODE_OUT") {
+    field(DESC, "Mode")
+    field(DTYP, "stream")
+    field(OUT, "@ANC300.protocol setStr(setm,$(A)) $(PORT) 0")
+    field(FLNK, "$(DEV):AX$(A):MODE_IN")
+
+    field("ZRVL", "0")
+    field("ONVL", "1")
+    field("TWVL", "2")
+    field("THVL", "3")
+    field("FRVL", "4")
+    field("FVVL", "5")
+    field("SXVL", "6")
+    field("ZRST", "gnd")
+    field("ONST", "inp")
+    field("TWST", "cap")
+    field("THST", "stp")
+    field("FRST", "off")
+    field("FVST", "stp+")
+    field("SXST", "stp-")
+
+    info(autosaveFields, "VAL")
+}
+

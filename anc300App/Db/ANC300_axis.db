@@ -1,0 +1,138 @@
+# - Axis serial number
+record(stringin, "$(DEV):AX$(A):SERIAL") {
+  field(DTYP, "stream")
+  field(DESC, "Axis serial number")
+  field(INP, "@ANC300.protocol getStrRaw(getser,$(A)) $(PORT) 0")
+  field(PINI, "YES")
+  field(PHAS, 1)
+}
+
+# - Capacitance (r/o) F
+record(bo, "$(DEV):AX$(A):MEAS_CAP") {
+  field(DESC, "Measure capacitance")
+  field(ZNAM, "Measure")
+  field(ONAM, "Measure")
+  field(FLNK, "$(DEV):AX$(A):CAP_STR")
+}
+
+record(stringin, "$(DEV):AX$(A):CAP_STR") {
+  field(DTYP, "stream")
+  field(DESC, "Capacitance")
+  field(INP, "@ANC300.protocol getStr(getc,$(A),capacitance,$(DEV)) $(PORT) 0")
+
+  field(PINI, "YES")
+  field(PHAS, 1)
+}
+
+# - Frequency (r/w) Hz
+record(ai, "$(DEV):AX$(A):FREQ_IN") {
+  field(DTYP, "stream")
+  field(DESC, "Frequency")
+  field(INP, "@ANC300.protocol getF_OK(getf,$(A),frequency,Hz) $(PORT) 0")
+  field(PREC, 6)
+  field(SCAN, "$(SCAN)")
+  field(EGU, "Hz")
+
+  field(PINI, "YES")
+  field(PHAS, 1)
+}
+
+record(ao, "$(DEV):AX$(A):FREQ_OUT") {
+  field(DTYP, "stream")
+  field(DESC, "Frequency")
+  field(OUT, "@ANC300.protocol setF(setf,$(A)) $(PORT) 0")
+  field(PREC, 6)
+  field(EGU, "Hz")
+  field(FLNK, "$(DEV):AX$(A):FREQ_IN")
+
+  info(autosaveFields, "VAL")
+}
+
+# - Voltage (r/w) V
+record(ai, "$(DEV):AX$(A):V_IN") {
+  field(DTYP, "stream")
+  field(DESC, "Voltage")
+  field(INP, "@ANC300.protocol getF(getv,$(A),voltage,V) $(PORT) 0")
+  field(PREC, 6)
+  field(EGU, "V")
+  field(SCAN, "$(SCAN)")
+
+  field(PINI, "YES")
+  field(PHAS, 1)
+}
+
+record(ao, "$(DEV):AX$(A):V_OUT") {
+  field(DTYP, "stream")
+  field(DESC, "Voltage")
+  field(OUT, "@ANC300.protocol setF(setv,$(A)) $(PORT) 0")
+  field(PREC, 6)
+  field(EGU, "V")
+  field(FLNK, "$(DEV):AX$(A):V_IN")
+
+  info(autosaveFields, "VAL")
+}
+
+# - Voltage offset (r/w) V
+record(ai, "$(DEV):AX$(A):OFFSET_IN") {
+  field(DTYP, "stream")
+  field(DESC, "Voltage offset")
+  field(INP, "@ANC300.protocol getF(geta,$(A),voltage,V) $(PORT) 0")
+  field(PREC, 6)
+  field(EGU, "V")
+  field(SCAN, "$(SCAN)")
+
+  field(PINI, "YES")
+  field(PHAS, 1)
+}
+
+record(ao, "$(DEV):AX$(A):OFFSET_OUT") {
+  field(DTYP, "stream")
+  field(DESC, "Voltage offset")
+  field(OUT, "@ANC300.protocol setF(seta,$(A)) $(PORT) 0")
+  field(PREC, 6)
+  field(EGU, "V")
+  field(FLNK, "$(DEV):AX$(A):OFFSET_IN")
+
+  info(autosaveFields, "VAL")
+}
+
+# - Output voltage (r/o) V
+record(ai, "$(DEV):AX$(A):VOLTS") {
+  field(DTYP, "stream")
+  field(DESC, "Output voltage")
+  field(INP, "@ANC300.protocol getF(geto,$(A),voltage,V) $(PORT) 0")
+  field(PREC, 6)
+  field(EGU, "V")
+  field(SCAN, "$(VSCAN)")
+
+  field(PINI, "YES")
+  field(PHAS, 1)
+}
+
+
+# - Stop (w/o)
+record(bo, "$(DEV):AX$(A):STOP") {
+  field(DTYP, "stream")
+  field(DESC, "Stop")
+  field(ZNAM, "Stop")
+  field(ONAM, "Stop")
+  field(OUT, "@ANC300.protocol stop($(A)) $(PORT) 0")
+}
+
+# - Step up (w/o)
+record(longout, "$(DEV):AX$(A):STEP_UP") {
+  field(DTYP, "stream")
+  field(DESC, "Step n steps up")
+  field(OUT, "@ANC300.protocol step(u,$(A),$(DEV)) $(PORT) 0")
+
+  info(autosaveFields, "VAL")
+}
+
+record(longout, "$(DEV):AX$(A):STEP_DOWN") {
+  field(DTYP, "stream")
+  field(DESC, "Step n steps down")
+  field(OUT, "@ANC300.protocol step(d,$(A),$(DEV)) $(PORT) 0")
+
+  info(autosaveFields, "VAL")
+}
+

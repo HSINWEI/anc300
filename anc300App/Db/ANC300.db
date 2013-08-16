@@ -1,0 +1,35 @@
+# ANC300 db
+# vim: ts=2 sw=2
+
+record(stringin, "$(DEV):INIT") {
+  field(DTYP, "stream")
+  field(DESC, "Login and initialize")
+  field(INP, "@ANC300.protocol login($(PASSWORD)) $(PORT) 0")
+  field(PINI, "YES")
+  field(FLNK, "$(DEV):VER")
+  field(PHAS, 0) # need to login before all others can start
+}
+
+record(stringin, "$(DEV):VER") {
+  field(DTYP, "stream")
+  field(DESC, "Device version")
+  field(INP, "@ANC300.protocol ver() $(PORT) 0")
+  field(FLNK, "$(DEV):CSER")
+}
+
+record(stringin, "$(DEV):CSER") {
+  field(DTYP, "stream")
+  field(DESC, "Device version")
+  field(INP, "@ANC300.protocol getStrRaw(getcser,) $(PORT) 0")
+}
+
+record(stringin, "$(DEV):ERROR") {
+  field(DESC, "Last error string")
+}
+
+record(stringout, "$(DEV):FEATURE_OUT") {
+  field(DTYP, "stream")
+  field(DESC, "Set feature code")
+  field(OUT, "@ANC300.protocol setStrRaw(setfc,,$(DEV)) $(PORT) 0")
+}
+
