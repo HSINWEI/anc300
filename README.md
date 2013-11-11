@@ -1,10 +1,10 @@
 ANC300 EPICS Driver
--------------------
+===================
 
 StreamDevice-based EPICS support for the attocube ANC300 piezo controller.
 
 Requirements
-============
+------------
 
 Though it may work on other versions, the driver was tested on these:
 
@@ -17,14 +17,14 @@ If included in $(TOP)/StreamDevice, it will be built automatically.
 The newer StreamDevice also requires a newer asyn (>= 4-18).
 
 Optional
-========
+--------
 
 1. EDM http://ics-web.sns.ornl.gov/edm/log/getLatest.php
    Screens are provided in $TOP/opi for EDM.
 2. Autosave http://www.aps.anl.gov/bcda/synApps/autosave/autosave.html
 
 Installation
-============
+------------
 
 1. Install EPICS
     1. If using a Debian-based system (e.g., Ubuntu), use the packages here http://epics.nsls2.bnl.gov/debian/
@@ -48,11 +48,17 @@ Installation
        < anc300_axis.cmd
 4. Go to the top directory and `make`
 5. If all goes well:
-
-    `cd iocBoot/iocANC300`  
-    `chmod +x st.cmd`  
-    `./st.cmd`  
+    ```
+    cd iocBoot/iocanc300
+    chmod +x st.cmd
+    ./st.cmd`
+    ```
 6. Run EDM:
-    `export EDMDATAFILES=$TOP/opi:$EDMDATAFILES`
-    `edm -x -m "DEV=E1:ANC300" anc300_axes` (general configuration)
-    `edm -x -m "DEV=E1:ANC300,A=1" anc300_axis` (axis 1)
+    ```
+    export EDMDATAFILES=$TOP/opi:$EDMDATAFILES
+    (general configuration)
+    edm -x -m "DEV=E1:ANC300" anc300_axes
+
+    (axis 1)
+    edm -x -m "DEV=E1:ANC300,A=1" anc300_axis
+    ```
